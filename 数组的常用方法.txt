@@ -1,0 +1,94 @@
+
+一 、改变原数组的方法
+    1). splice()     添加/删除数组元素 
+        语法：arrayObject.splice(index,howmany,item1,.....,itemX)
+        参数:
+        1.index：必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。
+        2.howmany：可选。要删除的项目数量。如果设置为 0，则不会删除项目。
+        3.item1, ..., itemX： 可选。向数组添加的新项目。
+
+        返回值: 如果有元素被删除,返回包含被删除项目的新数组。   
+    2). sort()     数组排序
+        语法：arrayObject.sort(sortby)
+        参数:
+        1.sortby 可选。规定排序顺序。必须是函数。。(a,b)=>a-b,升序   b-a降序
+        返回值: 返回包排序后的新数组。
+    3). pop()    删除数组中的最后一个数据
+        语法：arrayObject.pop()
+        参数:无
+        返回值: 返回被删除的元素。
+    4). shift()  删除数组的第一个元素
+        语法：arrayObject.shift()
+        参数:无
+        返回值: 返回被删除的元素。
+    5). push() 向数组的末尾添加元素
+        语法：arrayObject.push(newelement1,newelement2,....,newelementX)
+        参数:
+        1.newelement1    必需。要添加到数组的第一个元素。
+        2.newelement2    可选。要添加到数组的第二个元素。
+        3.newelementX    可选。可添加若干个元素。
+
+        返回值: arrayObject 的新长度。
+    6). unshift 向数组的开头添加一个或更多元素
+        语法：arrayObject.unshift(newelement1,newelement2,....,newelementX)
+        参数:
+        1.newelement1    必需。要添加到数组的第一个元素。
+        2.newelement2    可选。要添加到数组的第二个元素。
+        3.newelementX    可选。可添加若干个元素。
+
+        返回值: arrayObject 的新长度。
+    7). reverse() 颠倒数组中元素的顺序
+        语法：arrayObject.reverse()
+        参数:无
+        返回值: 颠倒后的新数组
+    8). copyWithin() 指定位置的成员复制到其他位置
+        参数:
+        1.target（必需）：从该位置开始替换数据。如果为负值，表示倒数。
+        2.start（可选）：从该位置开始读取数据，默认为 0。如果为负值，表示倒数。
+        3.end（可选）：到该位置前停止读取数据，默认等于数组长度。如果为负值，表示倒数。
+
+        返回值: 返回当前数组。
+    9). fill() 填充数组
+        语法： array.fill(value, start, end)
+        参数:
+        1.value  必需。填充的值。
+        2.start  可选。开始填充位置。
+        3.end    可选。停止填充位置 (默认为 array.length)
+
+        返回值: 返回当前数组。
+二 、不改变原数组的方法
+    1). slice() 拷贝数据
+        语法： array.slice(begin, end);
+        参数:
+        1.begin(可选): 索引数值,接受负值，从该索引处开始提取原数组中的元素,默认值为0。
+        2.end(可选):索引数值(不包括),接受负值，在该索引处前结束提取原数组元素，默认值为数组末尾(包括最后一个元素)。
+        返回值: 返回一个从开始到结束（不包括结束）选择的数组的一部分浅拷贝到一个新数组对象，且原数组不会被修改。
+    2). join() 数组转字符串
+        语法：array.join(str)
+        参数:
+        1.str(可选): 指定要使用的分隔符，默认使用逗号作为分隔符。
+        返回值: 返回生成的字符串。
+    3). concat() 合并两个或多个数组
+        语法： var newArr =oldArray.concat(arrayX,arrayX,......,arrayX)
+        参数:
+        1.arrayX（必须）：该参数可以是具体的值，也可以是数组对象。可以是任意多个。
+        返回值: 返回返回合并后的新数组。
+    4). indexOf() 查找数组是否存在某个元素
+        语法：array.indexOf(searchElement,fromIndex)
+        参数:
+        1.searchElement(必须):被查找的元素
+        2.fromIndex(可选):开始查找的位置(不能大于等于数组的长度，返回-1)，接受负值，默认值为0。
+        返回值: 返回下标
+    5). lastIndexOf() 查找指定元素在数组中的最后一个位置
+        语法：arr.lastIndexOf(searchElement,fromIndex)
+        参数:
+        1.searchElement(必须): 被查找的元素
+        2.fromIndex(可选): 逆向查找开始位置，默认值数组的长度-1，即查找整个数组。
+        返回值: 方法返回指定元素,在数组中的最后一个的索引，如果不存在则返回 -1。（从数组后面往前查找）
+    6). includes() 查找数组是否包含某个元素
+        语法： array.includes(searchElement,fromIndex=0)
+        参数:
+        1.searchElement(必须):被查找的元素
+        2.fromIndex(可选):默认值为0，参数表示搜索的起始位置，接受负值。正值超过数组长度，数组不会被搜索，返回false。负值绝对值超过长数组度，重置从0开始搜索。
+
+        返回值: 返回布尔
